@@ -9,12 +9,12 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
-public class AccountClientExample implements Example {
+public class AccountLifeCycleExample implements Example {
   @Inject private AccountClient accountClient;
 
   @Override
   public void run() throws HieroException {
-    IO.println("Running AccountClient example...");
+    IO.println("Running AccountLifeCycle example...");
 
     // Creating an account
     IO.println("\nCreate an Account...");

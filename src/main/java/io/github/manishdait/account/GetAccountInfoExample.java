@@ -10,14 +10,14 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
-public class AccountRepositoryExample implements Example {
+public class GetAccountInfoExample implements Example {
   @Inject private AccountClient accountClient;
 
   @Inject private AccountRepository accountRepository;
 
   @Override
   public void run() throws HieroException {
-    IO.println("Running AccountRepository example...");
+    IO.println("Running GetAccountInfo example...");
 
     // Create a mock account
     IO.println("\nCreating an account...");
