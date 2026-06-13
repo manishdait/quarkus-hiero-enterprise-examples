@@ -9,8 +9,7 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class FungibleTokenCreationExample implements Example {
-  @Inject
-  private FungibleTokenClient fungibleTokenClient;
+  @Inject private FungibleTokenClient fungibleTokenClient;
 
   @Override
   public void run() throws HieroException {
