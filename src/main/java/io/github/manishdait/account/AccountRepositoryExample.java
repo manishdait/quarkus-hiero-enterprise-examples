@@ -11,11 +11,9 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class AccountRepositoryExample implements Example {
-  @Inject
-  private AccountClient accountClient;
+  @Inject private AccountClient accountClient;
 
-  @Inject
-  private AccountRepository accountRepository;
+  @Inject private AccountRepository accountRepository;
 
   @Override
   public void run() throws HieroException {
@@ -33,9 +31,13 @@ public class AccountRepositoryExample implements Example {
     // Retrieve the accountInfo
     IO.println("\nRetrieving account information...");
 
-    AccountInfo accountInfo = accountRepository.findById(account.accountId()).orElseThrow(
-        () -> new RuntimeException("Unable to retrieve information for account " + account.accountId())
-    );
+    AccountInfo accountInfo =
+        accountRepository
+            .findById(account.accountId())
+            .orElseThrow(
+                () ->
+                    new RuntimeException(
+                        "Unable to retrieve information for account " + account.accountId()));
 
     IO.println("Account information retrieved successfully:");
     IO.println(accountInfo);

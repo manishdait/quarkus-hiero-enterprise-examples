@@ -6,8 +6,7 @@ import jakarta.inject.Inject;
 
 @QuarkusMain
 public class SampleApplication implements QuarkusApplication {
-  @Inject
-  private ExampleRunner exampleRunner;
+  @Inject private ExampleRunner exampleRunner;
 
   @Override
   public int run(String... args) throws Exception {

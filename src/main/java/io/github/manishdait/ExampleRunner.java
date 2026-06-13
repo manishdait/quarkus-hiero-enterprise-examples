@@ -7,8 +7,7 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class ExampleRunner {
-  @Inject
-  private Instance<Example> examples;
+  @Inject private Instance<Example> examples;
 
   public void runAll() throws HieroException {
     for (Example example : examples) {

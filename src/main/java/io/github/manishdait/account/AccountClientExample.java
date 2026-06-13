@@ -10,8 +10,7 @@ import jakarta.inject.Inject;
 
 @ApplicationScoped
 public class AccountClientExample implements Example {
-  @Inject
-  private AccountClient accountClient;
+  @Inject private AccountClient accountClient;
 
   @Override
   public void run() throws HieroException {
@@ -32,7 +31,12 @@ public class AccountClientExample implements Example {
     IO.println("\nRetrieving account balance...");
     final Hbar accountBalance = accountClient.getAccountBalance(account.accountId());
 
-    IO.println( "Balance for account " + account.accountId() + ": " + accountBalance.toTinybars() + " tinybars");
+    IO.println(
+        "Balance for account "
+            + account.accountId()
+            + ": "
+            + accountBalance.toTinybars()
+            + " tinybars");
 
     // Update Account
     IO.println("\nUpdating an account (not implemented)...");
