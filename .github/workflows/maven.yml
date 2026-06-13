@@ -37,4 +37,4 @@ jobs:
           HIERO_OPERATOR_PRIVATE_KEY: ${{ steps.solo.outputs.privateKey }}
           HIERO_NETWORK: "hiero-solo-action"
         run: |
-          ./mvnw clean package quarkus:run
+          ./mvnw clean package quarkus:run -Dhiero.network.nodes="127.0.0.1:50211:0.0.3" -Dhiero.network.mirrornode="http://localhost:5551"
