@@ -28,6 +28,12 @@ public class GetAccountInfoExample implements Example {
     IO.println("Account created successfully.");
     IO.println("Account ID: " + account.accountId());
 
+    try {
+      Thread.sleep(5000);
+    } catch (InterruptedException e) {
+      throw new RuntimeException(e);
+    }
+
     // Retrieve the accountInfo
     IO.println("\nRetrieving account information...");
 

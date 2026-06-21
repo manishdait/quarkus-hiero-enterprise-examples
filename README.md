@@ -9,7 +9,6 @@ Configure the following environment variables before running the examples:
 ```bash
 export HIERO_OPERATOR_ACCOUNT=<your-account-id>
 export HIERO_OPERATOR_PRIVATE_KEY=<your-private-key>
-export HIERO_NETWORK=hedera-testnet
 ```
 
 Alternatively, Create a `.env` file in the project root:
@@ -17,7 +16,6 @@ Alternatively, Create a `.env` file in the project root:
 ```bash
 HIERO_OPERATOR_ACCOUNT=<your-account-id>
 HIERO_OPERATOR_PRIVATE_KEY=<your-private-key>
-HIERO_NETWORK=hedera-testnet
 ```
 
 ## Running the Examples
